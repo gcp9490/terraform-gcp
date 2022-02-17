@@ -1,6 +1,6 @@
 provider "google" {
   project = "rakeshlab"
-  credentials = file("terraform-auth-file.json")
+  credentials = file("terraform-auth.json")
   region  = "europe-west2"
   zone    = "europe-west2-a"
 }
