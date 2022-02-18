@@ -38,6 +38,10 @@ variable "machine_type" {
   description = "- (Optional) The name of a Google Compute Engine machine type. Defaults to n1-standard-1. "
 }
 
+variable "service_account" {
+  default = "rakeshlab@rakeshlab.iam.gserviceaccount.com"
+  description = "Service account has added"
+}
 
 
 
