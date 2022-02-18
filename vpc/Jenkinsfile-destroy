@@ -33,6 +33,15 @@ pipeline {
 			 }
 		 }
 	 }
+	 
+	 stage('Terraform Plan') {
+		 steps {  
+			  dir('vpc')
+			 {
+                sh 'terraform plan'
+			 }
+		 }
+	}
          stage('Delete Terraform') {
 		 steps {  
 			  dir('vpc')
