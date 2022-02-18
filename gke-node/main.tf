@@ -20,9 +20,13 @@ resource "google_container_cluster" "create" {
   min_master_version = "${data.google_container_engine_versions.cluster_version.latest_node_version}"
   initial_node_count = "${var.cluster_node_count}"
   project            = "${var.google_project_id}"
-  service_account    = "${var.service_account}"
+  
 
   node_config {
     machine_type = "${var.machine_type}"
+  }
+  
+  node_config {
+    service_account    = "${var.service_account}"
   }
 }
