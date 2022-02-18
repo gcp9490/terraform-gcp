@@ -42,6 +42,15 @@ pipeline {
 			 }
 		 }
 	}
+	
+	stage('Terraform Apply') {
+		 steps {  
+			  dir('vpc')
+			 {
+                sh 'terraform apply -auto-approve'
+			 }
+		 }
+	}
          stage('Delete Terraform') {
 		 steps {  
 			  dir('vpc')
