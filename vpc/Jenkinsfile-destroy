@@ -25,6 +25,14 @@ pipeline {
             }
         }
         
+	stage('Initilize Terraform') {
+		 steps {  
+			  dir('vpc')
+			 {
+                sh 'terraform init'
+			 }
+		 }
+	 }
          stage('Delete Terraform') {
 		 steps {  
 			  dir('vpc')
