@@ -8,7 +8,7 @@ output "cluster_version" {
 }
 
 provider "google" {
-  credentials = "${file("./terraform.json")}"
+  credentials = "${file("./gke-node/terraform.json")}"
   project     = "${var.google_project_id}"
 }
 
