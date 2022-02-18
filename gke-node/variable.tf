@@ -8,7 +8,7 @@ variable "google_region" {
   description = "- (Required) Google region where the cluster will be deployed."
 }
 variable "cluster_version" {
-  default = "1.18"
+  default = "1.22.3-gke.1500"
   description = "- (Required) Version of the cluster."
 }
 variable "cluster_node_count" {
