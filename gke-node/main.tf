@@ -24,9 +24,7 @@ resource "google_container_cluster" "create" {
 
   node_config {
     machine_type = "${var.machine_type}"
-  }
-  
-  node_config {
     service_account    = "${var.service_account}"
   }
+
 }
