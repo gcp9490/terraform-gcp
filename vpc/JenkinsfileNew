@@ -27,7 +27,7 @@ stages {
         
     stage('Initialize Terraform') {
 		 steps {  
-			  dir('VPC')
+			  dir('vpc')
 			 {
                 sh 'terraform init'
 			 }
@@ -36,7 +36,7 @@ stages {
 				 
 	stage('Terraform Plan') {
 		 steps {  
-			  dir('VPC')
+			  dir('vpc')
 			 {
                 sh 'terraform plan'
 			 }
@@ -45,7 +45,7 @@ stages {
 				 
 	stage('Terraform Apply') {
 		 steps {  
-			  dir('VPC')
+			  dir('vpc')
 			 {
                 sh 'terraform apply -auto-approve'
 			 }
