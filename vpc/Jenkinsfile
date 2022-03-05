@@ -51,6 +51,14 @@ pipeline {
 			 }
 		 }
 	}
+	    stage('Push Terraform State file to Cloud storage') {
+		 steps {  
+			  dir('vpc')
+			 {
+                sh 'sudo gsutil cp terraform.tfstate.backup gs://terraform-state-file1'
+			 }
+		 }
+	}
                              
 }
 }
