@@ -56,7 +56,7 @@ stages {
 		 steps {  
 			  dir('vpc')
 			 {
-                sh 'sudo gsutil cp terraform.tfstate gs://terraform-state-file1'
+                sh 'gsutil cp terraform.tfstate gs://terraform-state-file1'
 			 }
 		 }
 	}
